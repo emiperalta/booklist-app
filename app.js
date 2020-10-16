@@ -43,15 +43,15 @@ class UI {
         const form = document.querySelector('#book-form');
         container.insertBefore(div, form);
 
-        setTimeout(() => div.remove(), 22000);
+        setTimeout(() => div.remove(), 2000);
     }
 };
 
 class Store {
     static getBooks() {
         let books;
-        if (localStorage.getItem('books') === null) books = [];
-        else books = JSON.parse(localStorage.getItem('books'));
+        if (sessionStorage.getItem('books') === null) books = [];
+        else books = JSON.parse(sessionStorage.getItem('books'));
 
         return books;
     }
@@ -60,7 +60,7 @@ class Store {
         const books = Store.getBooks();
         books.push(book);
 
-        localStorage.setItem('books', JSON.stringify(books));
+        sessionStorage.setItem('books', JSON.stringify(books));
     }
 
     static deleteBook(isbn) {
@@ -69,7 +69,7 @@ class Store {
             if (book.isbn === isbn) books.splice(index, 1);
         });
 
-        localStorage.setItem('books', JSON.stringify(books));
+        sessionStorage.setItem('books', JSON.stringify(books));
     }
 };
 
