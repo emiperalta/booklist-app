@@ -3,7 +3,7 @@ class Book {
         this.title = title;
         this.author = author;
         this.isbn = isbn;
-    };
+    }
 };
 
 class UI {
@@ -31,7 +31,7 @@ class UI {
     static deleteBook(el) {
         if (el.classList.contains('delete')) {
             el.parentElement.parentElement.remove();
-        };
+        }
     }
 
     static showAlert(message, className) {
@@ -82,9 +82,8 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
     const author = document.querySelector('#author').value;
     const isbn = document.querySelector('#isbn').value;
 
-    if (title === '' || author === '' || isbn === '') {
-        UI.showAlert('Please fill in all fields', 'alert-danger');
-    } else {
+    if (title === '' || author === '' || isbn === '') UI.showAlert('Please fill in all fields', 'alert-danger');
+    else {
         const book = new Book(title, author, isbn);
         UI.addBookToList(book);
         Store.addBook(book);
