@@ -1,2 +1,2 @@
 # BookList-app
-BookList app using JS and CSS.
+BookList app using JS, CSS and sessionStorage for data persintence.
