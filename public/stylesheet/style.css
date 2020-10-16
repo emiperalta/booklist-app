@@ -22,6 +22,7 @@ a {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 400;
+    margin-bottom: 40px;
 }
 
 .text-primary {
@@ -31,7 +32,7 @@ a {
 
 #book-form {
     text-align: center;
-    padding: 10px 0;
+    padding: 5px 0;
 }
 
 #book-form label {
@@ -50,6 +51,7 @@ a {
     margin: 3px 0;
     outline-style: none;
     border: 2px solid #d3d3d3;
+    font-size: 17px;
 }
 
 .btn {
@@ -58,6 +60,8 @@ a {
     font-size: 18px;
     margin-top: 5px;
     border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 .btn-primary {
@@ -65,11 +69,19 @@ a {
     color: #fff;
 }
 
+.btn-primary:hover {
+    background: rgb(0, 127, 212);    
+}
+
 .btn-danger {
     background: rgb(165, 25, 25);
     color: #fff;
     border-radius: 6px;
     padding: 0 8px;
+}
+
+.btn-danger:hover {
+    background: rgb(219, 31, 31);
 }
 
 .table {
@@ -96,6 +108,51 @@ a {
     font-size: 15px;
 }
 
-.alert {
-    margin-top: 30px;
+.alert {    
+    margin: auto;
+    margin-bottom: 1px;
+    text-align: center;
+    padding: 8px;
+    width: 40%;
+    font-size: 17px;
+    border-radius: 15px;
+}
+
+.alert-danger {
+    background: rgb(209, 29, 29);
+    color: #fff;
+}
+
+.alert-success {
+    background: rgb(0, 145, 0);
+    color: #fff;
+}
+
+.alert-warning {
+    background: rgb(228, 129, 36);
+    color: #fff;
+}
+
+@media (max-width: 650px) {
+    .alert {    
+        margin: auto;
+        margin-bottom: 1px;
+        text-align: center;
+        padding: 8px;
+        width: 70%;
+        font-size: 17px;
+        border-radius: 15px;
+    }
+}
+
+@media (min-width: 900px) {
+    .alert {    
+        margin: auto;
+        margin-bottom: 1px;
+        text-align: center;
+        padding: 8px;
+        width: 30%;
+        font-size: 17px;
+        border-radius: 15px;
+    }
 }
